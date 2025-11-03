@@ -9,7 +9,7 @@
       - `is_admin` (boolean, default false)
       - `created_at` (timestamptz)
       - `updated_at` (timestamptz)
-    
+
     - `perfumes`
       - `id` (uuid, primary key)
       - `name` (text)
@@ -21,7 +21,7 @@
       - `description` (text)
       - `created_at` (timestamptz)
       - `updated_at` (timestamptz)
-    
+
     - `reviews`
       - `id` (uuid, primary key)
       - `perfume_id` (uuid, references perfumes)
@@ -29,13 +29,13 @@
       - `rating` (integer, 1-5)
       - `comment` (text)
       - `created_at` (timestamptz)
-    
+
     - `favorites`
       - `id` (uuid, primary key)
       - `perfume_id` (uuid, references perfumes)
       - `user_id` (uuid, references profiles)
       - `created_at` (timestamptz)
-    
+
     - `cart_items`
       - `id` (uuid, primary key)
       - `perfume_id` (uuid, references perfumes)
@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS profiles (
   id uuid PRIMARY KEY REFERENCES auth.users ON DELETE CASCADE,
   email text UNIQUE NOT NULL,
   full_name text,
+  tell number maxlength 15,
   is_admin boolean DEFAULT false,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()

@@ -81,12 +81,12 @@ export default function PerfumeDetail({
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 overflow-y-auto">
       <div className="min-h-screen px-4 py-8">
-        <div className="max-w-6xl mx-auto bg-gray-800 rounded-lg shadow-2xl">
-          <div className="sticky top-0 bg-gray-800 z-10 flex items-center justify-between p-6 border-b border-gray-700">
+        <div className="max-w-6xl mx-auto bg-zinc-800 rounded-lg shadow-2xl">
+          <div className="sticky top-0 bg-zinc-800 z-10 flex items-center justify-between p-6 border-b border-zinc-700">
             <h2 className="text-2xl font-bold text-white">Detalhes do Produto</h2>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-white transition-colors"
             >
               <X size={28} />
             </button>
@@ -94,7 +94,7 @@ export default function PerfumeDetail({
 
           <div className="p-6">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-900">
+              <div className="relative aspect-square rounded-lg overflow-hidden bg-zinc-900">
                 <img
                   src={perfume.image_base64}
                   alt={perfume.name}
@@ -102,7 +102,7 @@ export default function PerfumeDetail({
                 />
                 {perfume.status === 'unavailable' && (
                   <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-                    <span className="bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold text-lg">
+                    <span className="bg-zinc-700 text-white px-6 py-3 rounded-lg font-semibold text-lg">
                       Indisponível
                     </span>
                   </div>
@@ -111,7 +111,7 @@ export default function PerfumeDetail({
 
               <div>
                 <h1 className="text-3xl font-bold text-white mb-2">{perfume.name}</h1>
-                <p className="text-xl text-gray-400 mb-4">{perfume.brand}</p>
+                <p className="text-xl text-zinc-400 mb-4">{perfume.brand}</p>
 
                 {reviews.length > 0 && (
                   <div className="flex items-center space-x-2 mb-6">
@@ -123,19 +123,19 @@ export default function PerfumeDetail({
                           className={
                             i < Math.round(averageRating)
                               ? 'fill-amber-400 text-amber-400'
-                              : 'text-gray-600'
+                              : 'text-zinc-600'
                           }
                         />
                       ))}
                     </div>
-                    <span className="text-gray-400">
+                    <span className="text-zinc-400">
                       {averageRating.toFixed(1)} ({reviews.length} avaliações)
                     </span>
                   </div>
                 )}
 
                 {perfume.description && (
-                  <p className="text-gray-300 mb-6">{perfume.description}</p>
+                  <p className="text-zinc-300 mb-6">{perfume.description}</p>
                 )}
 
                 <div className="flex items-baseline space-x-3 mb-6">
@@ -143,7 +143,7 @@ export default function PerfumeDetail({
                     R$ {displayPrice.toFixed(2)}
                   </span>
                   {hasPromotion && (
-                    <span className="text-xl text-gray-500 line-through">
+                    <span className="text-xl text-zinc-500 line-through">
                       R$ {perfume.price.toFixed(2)}
                     </span>
                   )}
@@ -152,7 +152,7 @@ export default function PerfumeDetail({
                 <div className="flex space-x-3">
                   <button
                     onClick={onToggleFavorite}
-                    className="flex items-center space-x-2 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                    className="flex items-center space-x-2 px-6 py-3 bg-zinc-700 hover:bg-zinc-600 text-white rounded-lg transition-colors"
                   >
                     <Heart
                       size={20}
@@ -167,7 +167,7 @@ export default function PerfumeDetail({
                       onClose();
                     }}
                     disabled={perfume.status === 'unavailable'}
-                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                    className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:bg-zinc-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                   >
                     <ShoppingCart size={20} />
                     <span>Adicionar ao Carrinho</span>
@@ -176,16 +176,16 @@ export default function PerfumeDetail({
               </div>
             </div>
 
-            <div className="border-t border-gray-700 pt-8">
+            <div className="border-t border-zinc-700 pt-8">
               <h3 className="text-2xl font-bold text-white mb-6">Avaliações</h3>
 
-              <form onSubmit={handleSubmitReview} className="mb-8 bg-gray-900 p-6 rounded-lg">
+              <form onSubmit={handleSubmitReview} className="mb-8 bg-zinc-900 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold text-white mb-4">
                   {userReview ? 'Editar sua avaliação' : 'Deixe sua avaliação'}
                 </h4>
 
                 <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">
                     Nota
                   </label>
                   <div className="flex space-x-2">
@@ -201,7 +201,7 @@ export default function PerfumeDetail({
                           className={
                             star <= rating
                               ? 'fill-amber-400 text-amber-400'
-                              : 'text-gray-600'
+                              : 'text-zinc-600'
                           }
                         />
                       </button>
@@ -210,14 +210,14 @@ export default function PerfumeDetail({
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">
                     Comentário (opcional)
                   </label>
                   <textarea
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     rows={4}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                    className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
                     placeholder="Conte sua experiência com este perfume..."
                   />
                 </div>
@@ -232,7 +232,7 @@ export default function PerfumeDetail({
 
               <div className="space-y-4">
                 {reviews.map((review) => (
-                  <div key={review.id} className="bg-gray-900 p-6 rounded-lg">
+                  <div key={review.id} className="bg-zinc-900 p-6 rounded-lg">
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <p className="font-semibold text-white">
@@ -246,24 +246,24 @@ export default function PerfumeDetail({
                               className={
                                 i < review.rating
                                   ? 'fill-amber-400 text-amber-400'
-                                  : 'text-gray-600'
+                                  : 'text-zinc-600'
                               }
                             />
                           ))}
                         </div>
                       </div>
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-zinc-500">
                         {new Date(review.created_at).toLocaleDateString('pt-BR')}
                       </span>
                     </div>
                     {review.comment && (
-                      <p className="text-gray-300">{review.comment}</p>
+                      <p className="text-zinc-300">{review.comment}</p>
                     )}
                   </div>
                 ))}
 
                 {reviews.length === 0 && (
-                  <p className="text-center text-gray-400 py-8">
+                  <p className="text-center text-zinc-400 py-8">
                     Seja o primeiro a avaliar este perfume!
                   </p>
                 )}

@@ -31,21 +31,21 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center px-4">
-      <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-2xl p-8">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black flex items-center justify-center px-4">
+      <div className="max-w-md w-full bg-zinc-800 rounded-lg shadow-2xl p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">VL Store Import</h1>
-          <p className="text-gray-400">Perfumes Importados de Luxo</p>
+          <p className="text-zinc-400">Perfumes Importados de Luxo</p>
         </div>
 
-        <div className="flex mb-6 bg-gray-900 rounded-lg p-1">
+        <div className="flex mb-6 bg-zinc-900 rounded-lg p-1">
           <button
             onClick={() => {
               setIsLogin(true);
               setError('');
             }}
             className={`flex-1 py-2 rounded-md transition-colors ${
-              isLogin ? 'bg-amber-500 text-white' : 'text-gray-400'
+              isLogin ? 'bg-amber-500 text-white' : 'text-zinc-400'
             }`}
           >
             Login
@@ -56,7 +56,7 @@ export default function Auth() {
               setError('');
             }}
             className={`flex-1 py-2 rounded-md transition-colors ${
-              !isLogin ? 'bg-amber-500 text-white' : 'text-gray-400'
+              !isLogin ? 'bg-amber-500 text-white' : 'text-zinc-400'
             }`}
           >
             Registro
@@ -66,41 +66,41 @@ export default function Auth() {
         <form onSubmit={handleSubmit} className="space-y-4">
           {!isLogin && (
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-zinc-300 mb-2">
                 Nome Completo
               </label>
               <input
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                className="w-full px-4 py-2 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
                 required={!isLogin}
               />
             </div>
           )}
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-zinc-300 mb-2">
               Email
             </label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+              className="w-full px-4 py-2 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-zinc-300 mb-2">
               Senha
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+              className="w-full px-4 py-2 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
               required
             />
           </div>

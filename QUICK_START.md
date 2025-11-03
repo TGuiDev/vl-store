@@ -70,7 +70,7 @@ Cores do tema:
 - **Fundo**: Gradiente de cinza escuro para preto
 - **Destaques**: Dourado/Âmbar (#F59E0B)
 - **Texto**: Branco e tons de cinza
-- **Cards**: Cinza escuro (gray-800)
+- **Cards**: Cinza escuro (zinc-800)
 
 ## 🔐 Segurança
 

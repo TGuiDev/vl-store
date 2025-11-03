@@ -37,11 +37,11 @@ export default function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black py-12">
       <div className="max-w-2xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-white mb-8">Meu Perfil</h1>
 
-        <div className="bg-gray-800 rounded-lg p-8">
+        <div className="bg-zinc-800 rounded-lg p-8">
           <div className="flex items-center justify-center mb-8">
             <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-full p-6">
               <User size={64} className="text-white" />
@@ -50,7 +50,7 @@ export default function Profile() {
 
           <form onSubmit={handleUpdateProfile} className="space-y-6">
             <div>
-              <label className="flex items-center space-x-2 text-sm font-medium text-gray-300 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
                 <User size={18} />
                 <span>Nome Completo</span>
               </label>
@@ -58,13 +58,13 @@ export default function Profile() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
                 placeholder="Seu nome completo"
               />
             </div>
 
             <div>
-              <label className="flex items-center space-x-2 text-sm font-medium text-gray-300 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
                 <Mail size={18} />
                 <span>Email</span>
               </label>
@@ -72,13 +72,13 @@ export default function Profile() {
                 type="email"
                 value={profile?.email || ''}
                 disabled
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-500 cursor-not-allowed"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-zinc-500 cursor-not-allowed"
               />
-              <p className="text-xs text-gray-500 mt-1">O email não pode ser alterado</p>
+              <p className="text-xs text-zinc-500 mt-1">O email não pode ser alterado</p>
             </div>
 
             <div>
-              <label className="flex items-center space-x-2 text-sm font-medium text-gray-300 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-medium text-zinc-300 mb-2">
                 <Calendar size={18} />
                 <span>Membro desde</span>
               </label>
@@ -90,7 +90,7 @@ export default function Profile() {
                     : ''
                 }
                 disabled
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-500 cursor-not-allowed"
+                className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-zinc-500 cursor-not-allowed"
               />
             </div>
 
@@ -117,7 +117,7 @@ export default function Profile() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-amber-500 hover:bg-amber-600 disabled:bg-gray-700 text-white py-3 rounded-lg font-semibold transition-colors"
+              className="w-full bg-amber-500 hover:bg-amber-600 disabled:bg-zinc-700 text-white py-3 rounded-lg font-semibold transition-colors"
             >
               {loading ? 'Atualizando...' : 'Atualizar Perfil'}
             </button>

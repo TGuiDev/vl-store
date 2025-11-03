@@ -2,10 +2,10 @@ import { Phone, Instagram, MessageCircle, Mail } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black py-12">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-white mb-4 text-center">Entre em Contato</h1>
-        <p className="text-gray-400 text-center mb-12">
+        <p className="text-zinc-400 text-center mb-12">
           Estamos aqui para ajudar! Entre em contato conosco através dos canais abaixo.
         </p>
 
@@ -39,13 +39,13 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="bg-gray-800 rounded-lg p-8">
+        <div className="bg-zinc-800 rounded-lg p-8">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">
             Informações de Contato
           </h2>
 
           <div className="space-y-4">
-            <div className="flex items-center space-x-4 text-gray-300">
+            <div className="flex items-center space-x-4 text-zinc-300">
               <Phone className="text-amber-400" size={24} />
               <div>
                 <p className="font-semibold text-white">Telefone / WhatsApp</p>
@@ -53,7 +53,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 text-gray-300">
+            <div className="flex items-center space-x-4 text-zinc-300">
               <Instagram className="text-amber-400" size={24} />
               <div>
                 <p className="font-semibold text-white">Instagram</p>
@@ -61,7 +61,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 text-gray-300">
+            <div className="flex items-center space-x-4 text-zinc-300">
               <Mail className="text-amber-400" size={24} />
               <div>
                 <p className="font-semibold text-white">Email</p>
@@ -70,9 +70,9 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-gray-700">
+          <div className="mt-8 pt-6 border-t border-zinc-700">
             <h3 className="text-lg font-semibold text-white mb-4">Horário de Atendimento</h3>
-            <div className="text-gray-300 space-y-2">
+            <div className="text-zinc-300 space-y-2">
               <p>Segunda a Sexta: 9h às 18h</p>
               <p>Sábado: 9h às 13h</p>
               <p>Domingo: Fechado</p>
@@ -92,7 +92,7 @@ export default function Contact() {
               href="https://wa.me/5519992483502"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-zinc-100 transition-colors"
             >
               Falar no WhatsApp
             </a>

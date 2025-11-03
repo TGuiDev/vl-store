@@ -80,21 +80,21 @@ export default function Cart() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black flex items-center justify-center">
         <div className="text-white text-xl">Carregando...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black py-8">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black py-8">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-white mb-8">Carrinho de Compras</h1>
 
         {cartItems.length === 0 ? (
-          <div className="bg-gray-800 rounded-lg p-12 text-center">
-            <ShoppingCart size={64} className="mx-auto text-gray-600 mb-4" />
-            <p className="text-gray-400 text-lg">Seu carrinho está vazio</p>
+          <div className="bg-zinc-800 rounded-lg p-12 text-center">
+            <ShoppingCart size={64} className="mx-auto text-zinc-600 mb-4" />
+            <p className="text-zinc-400 text-lg">Seu carrinho está vazio</p>
           </div>
         ) : (
           <>
@@ -102,7 +102,7 @@ export default function Cart() {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-gray-800 rounded-lg p-4 flex items-center space-x-4"
+                  className="bg-zinc-800 rounded-lg p-4 flex items-center space-x-4"
                 >
                   <img
                     src={item.perfumes?.image_base64}
@@ -112,7 +112,7 @@ export default function Cart() {
 
                   <div className="flex-1">
                     <h3 className="text-white font-semibold">{item.perfumes?.name}</h3>
-                    <p className="text-gray-400 text-sm">{item.perfumes?.brand}</p>
+                    <p className="text-zinc-400 text-sm">{item.perfumes?.brand}</p>
                     <p className="text-amber-400 font-bold mt-1">
                       R${' '}
                       {(item.perfumes?.promotion_price || item.perfumes?.price || 0).toFixed(2)}
@@ -122,7 +122,7 @@ export default function Cart() {
                   <div className="flex items-center space-x-3">
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-lg transition-colors"
+                      className="bg-zinc-700 hover:bg-zinc-600 text-white p-2 rounded-lg transition-colors"
                     >
                       <Minus size={16} />
                     </button>
@@ -131,7 +131,7 @@ export default function Cart() {
                     </span>
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-lg transition-colors"
+                      className="bg-zinc-700 hover:bg-zinc-600 text-white p-2 rounded-lg transition-colors"
                     >
                       <Plus size={16} />
                     </button>
@@ -147,7 +147,7 @@ export default function Cart() {
               ))}
             </div>
 
-            <div className="bg-gray-800 rounded-lg p-6">
+            <div className="bg-zinc-800 rounded-lg p-6">
               <div className="flex justify-between items-center mb-6">
                 <span className="text-xl text-white font-semibold">Total:</span>
                 <span className="text-3xl text-amber-400 font-bold">
@@ -172,7 +172,7 @@ export default function Cart() {
 
                 <button
                   onClick={clearCart}
-                  className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-colors"
+                  className="w-full bg-zinc-700 hover:bg-zinc-600 text-white py-3 rounded-lg font-semibold transition-colors"
                 >
                   Limpar Carrinho
                 </button>

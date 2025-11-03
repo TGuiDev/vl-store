@@ -115,7 +115,7 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black flex items-center justify-center">
         <div className="text-white text-xl">Carregando...</div>
       </div>
     );
@@ -134,23 +134,23 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
           <div className="relative mb-6">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400" />
             <input
               type="text"
               placeholder="Buscar perfumes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+              className="w-full pl-12 pr-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
             />
           </div>
 
           <div className="flex items-center space-x-2 mb-4">
-            <SlidersHorizontal className="text-gray-400" size={20} />
-            <span className="text-gray-300 font-medium">Filtros</span>
+            <SlidersHorizontal className="text-zinc-400" size={20} />
+            <span className="text-zinc-300 font-medium">Filtros</span>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -161,7 +161,7 @@ export default function Home() {
                 className={`px-4 py-2 rounded-lg transition-colors ${
                   selectedBrand === brand
                     ? 'bg-amber-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
                 }`}
               >
                 {brand}
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-4 text-gray-400">
+        <div className="mb-4 text-zinc-400">
           {filteredPerfumes.length} produtos encontrados
         </div>
 
@@ -194,7 +194,7 @@ export default function Home() {
 
         {filteredPerfumes.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">Nenhum perfume encontrado</p>
+            <p className="text-zinc-400 text-lg">Nenhum perfume encontrado</p>
           </div>
         )}
       </div>

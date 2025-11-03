@@ -24,7 +24,6 @@ function AppContent() {
           'postgres_changes',
           {
             event: '*',
-            asd
             schema: 'public',
             table: 'cart_items',
             filter: `user_id=eq.${user.id}`,
@@ -54,7 +53,7 @@ function AppContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black flex items-center justify-center">
         <div className="text-white text-xl">Espere. Carregando...</div>
       </div>
     );
@@ -65,7 +64,7 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} cartCount={cartCount} />
 
       {currentPage === 'home' && <Home />}
